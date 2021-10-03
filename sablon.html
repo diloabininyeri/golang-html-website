@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<script src="/js/alert.js"></script>
+<body>
+<h1>{{.Data.PageTitle}}</h1>
+<ul>
+    {{range .Data.Todos}}
+    {{if .Done}}
+    <li class="done">{{.Title}} is true</li>
+    {{else}}
+    <li>{{.Title}}</li>
+    {{end}}
+    {{end}}
+</ul>
+
+<h2>TEST BINDING VARIABLE</h2>
+<p>{{.Name}}</p>
+<p>{{.Surname}}</p>
+<p>{{.Address}}</p>
+
+<h2>RANGE LOOP</h2>
+{{range .Array}}
+<p>{{.}}</p>
+{{end}}
+</body>
+</html>
